@@ -1,2 +1,8 @@
-<h1>Quotations#new</h1>
-<p>Find me in app/views/quotations/new.html.erb</p>
+<h1>Enter a new quotation below</h1>
+
+<%= form_for @quote do |f| %>
+	Content: <%= f.text_field :content %>
+	<br>
+	<br>
+	<%= f.submit %>
+<% end %>

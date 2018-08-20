@@ -1,2 +1,9 @@
-<h1>Quotations#index</h1>
-<p>Find me in app/views/quotations/index.html.erb</p>
+<h1>All quotations</h1>
+
+<%= link_to "Add new quotation", new_quotation_path %>
+
+<% @quotes.each do |f| %>
+	<p>
+		"<%= f.content %>" (<%= f.created_at.strftime('%d %B %Y') %>)
+	</p>
+<% end %>
