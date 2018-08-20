@@ -2,10 +2,12 @@
 
 <%= link_to "Add new quotation", new_quotation_path %>
 
-<% @quotes.each do |f| %>
-	<p>
-		"<%= f.content %>" (<%= f.created_at.strftime('%d %B %Y') %>)
-	</p>
+<% if @quotes.present? %>
+	<% @quotes.each do |f| %>
+		<p>
+			"<%= f.content %>" (<%= f.created_at.strftime('%d %B %Y') %>)
+		</p>
+	<% end %>
 <% end %>
 
 <br>
