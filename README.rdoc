@@ -4,4 +4,4 @@
 
 * To fill the database: rake db:seed
 
-* DEMO: https://netgurucc-szulem.herokuapp.com/
+* DEMO: https://netgurucc-szulem.herokuapp.com
