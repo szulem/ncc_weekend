@@ -1,15 +1,16 @@
 <h1>All quotations</h1>
-
-<%= link_to "Add new quotation", new_quotation_path %>
+<p class="lead">
+  <%= link_to "Add new quotation", new_quotation_path %>
+</p>
 
 <% if @quotes.present? %>
 	<% @quotes.each do |f| %>
-		<p>
-			"<%= f.content %>" (<%= f.created_at.strftime('%d %B %Y') %>)
-		</p>
+		<blockquote class="blockquote">
+			"<%= f.content %>" <small>(<%= f.created_at.strftime('%d %B %Y') %>)</small>
+		</blockquote>
 	<% end %>
 <% end %>
 
 <br>
 
-<%= will_paginate @quotes %>
+<%= will_paginate @quotes, renderer: BootstrapPagination::Rails, previous_label: "Previous", next_label: "Next", inner_windows: 1, outer_window: 0 %>
