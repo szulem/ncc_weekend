@@ -3,6 +3,7 @@
 <br />
 
 <%= form_for @quote do |f| %>
+  <%= render 'shared/error_messages' %>
   <div class="form-group">
     Content: <%= f.text_field :content, class: "form-control" %>
   </div>

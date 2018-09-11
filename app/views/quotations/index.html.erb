@@ -4,11 +4,11 @@
 </p>
 
 <% if @quotes.present? %>
-	<% @quotes.each do |f| %>
-		<blockquote class="blockquote">
-			"<%= f.content %>" <small>(<%= f.created_at.strftime('%d %B %Y') %>)</small>
-		</blockquote>
-	<% end %>
+  <% @quotes.each do |f| %>
+    <blockquote class="blockquote">
+      "<%= f.content %>" <small>(<%= f.created_at.strftime('%d %B %Y') %>)</small>
+    </blockquote>
+  <% end %>
 <% end %>
 
 <br>
