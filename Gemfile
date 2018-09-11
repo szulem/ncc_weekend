@@ -11,6 +11,7 @@ gem 'jquery-rails',   '4.3.1'
 gem 'turbolinks',     '5.0.1'
 gem 'jbuilder',       '2.7.0'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+gem "twitter-bootstrap-rails", '~> 3.2.0'
 
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
@@ -18,6 +19,7 @@ gem 'spring',        group: :development
 group :development, :test do
   gem 'sqlite3', '1.3.13'
   gem 'byebug',  '9.0.6', platform: :mri
+  gem 'rspec-rails', '~> 3.8'
 end
 
 group :production do
